@@ -1,0 +1,21 @@
+1.libssh动态库的生成和安装
+ 1)在libssh目录下创建build文件夹
+   mkdir build
+ 
+ 2)cmake
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+ 3)make
+   make 
+ 4)install
+   make install    (root)
+   
+2.example
+  在libssh目录下，其中samplesshd-kbdint.c介绍了怎么创建一个ssh server端
+  
+3.使用
+  直接调用libssh.so即可
+  
+附：
+  手动生成dsa密钥
+  ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
